@@ -1,6 +1,5 @@
 
 from django.http import HttpResponse
-from django.shortcuts import render
 from django.views.generic import TemplateView
 from .models import Manual, Software, SparePart, Equipment
 
