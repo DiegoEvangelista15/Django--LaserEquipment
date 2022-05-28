@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="d-flex justify-content-center">
+<table style="color: white;border-spacing: 38px;border-collapse: separate">
+    <thead>
+    <tr>
+        <th class="letra">Name</th>
+        <th>Type</th>
+        <th>Download Link</th>
+    </tr>
+    </thead>
+    <tbody>
+        {% for n in software %}
+    <tr>       
+        <td>{{n.name}}</td>
+        <td>{{n.type}}</td>
+        <td><a href="{{n.file_upload.url}}" download="{{n.file_upload.url}}">Download</a></td>       
+    </tr>  
+    {% endfor %}
+ </table>
+
+</div>
+
+
+
+{% comment %} <h1>Download File using Django</h1>
+
+<a href="{{n.file_upload.url}}" download="{{n.file_upload.url}}">{{n.name}}</a> {% endcomment %}
+
+{% endblock %}

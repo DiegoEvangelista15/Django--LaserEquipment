@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="fundo">
+<div class="container">
+    
+    <div class="row">
+        {% comment %} primeira coluna aqui {% endcomment %}
+      <div class="col-sm">
+        <h2 class="certo">Contato</h2>
+        <br>
+        <p class="certo">Telefone: 4321-4321</p>
+        <p><a href=mailto:br@sunteclaser.com?subject="link HTML">Clique aqui para nos enviar um e-mail!</a></p>
+        <p class="certo"><a href="url">Facebook</a></p>
+        <p class="certo"><a href="url">Instagram</a></p>
+        <p class="certo"><a href="url">TikTok</a></p>
+        <p class="certo"><a href="url">Linkedin</a></p>
+        <br>
+        <a href="https://www.google.com/webhp?hl=pt-BR&sa=X&ved=0ahUKEwjvvozVioH4AhV6FLkGHXKyADcQPAgI">
+          <img src="{% static 'img/download.png' %}" alt="HTML tutorial" width="232" height="75"/>
+        </a>
+        <p></p>
+        <a href="https://www.google.com/webhp?hl=pt-BR&sa=X&ved=0ahUKEwjvvozVioH4AhV6FLkGHXKyADcQPAgI">
+          <img src="{% static 'img/hanslaser.jpeg' %}" alt="HTML tutorial" width="332" height="75"/>
+        </a>
+      </div>
+      
+
+      {% comment %} Segunda coluna aqui {% endcomment %}
+      <div class="col-sm">
+        <h2 class="certo">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Address</h2>
+        <iframe width="700" height="500"  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3674.6032742222483!2d-47.070332084419775!3d-22.927999385000966!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c8c8d824cc60bb%3A0xc01edfdf764242a8!2sSuntec%20Laser%20Tecnologia!5e0!3m2!1spt-BR!2sbr!4v1653699119888!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+  <div>
+
+
+{% endblock %}

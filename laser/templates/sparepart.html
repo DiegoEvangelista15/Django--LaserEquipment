@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<br>
+
+
+
+<div class="container">
+    <div class="row row-cols-4">
+
+    {% for n in sparepart %}
+      <div class="col">
+
+        <div class="card" style="width: 15rem;">
+            <p><a href="{{n.image.thumb}}}"><img src="{{n.image.thumb.url}}" class="card-img-top" alt="..."></a></p>
+            {% comment %} <img src="{{n.image.thumb.url}}" class="card-img-top" alt="..."> {% endcomment %}
+            <div class="card-body">
+              <h5 class="card-title">{{n.name}}</h5>
+              <p class="card-text">{{n.description}}</p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Type: {{n.type}}</li>
+              <li class="list-group-item">R$ {{n.price}}</li>
+              
+            </ul>
+          </div>
+          
+
+
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  
+
+{% endblock %}
